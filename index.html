@@ -4,12 +4,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Jersey Doko</title>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4906776588234112"
+     crossorigin="anonymous"></script>
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-  * {
-    box-sizing: border-box;
-  }
+  * { box-sizing: border-box; }
   body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -19,7 +21,6 @@
     flex-direction: column;
     min-height: 100vh;
   }
-
   header {
     background: #fff;
     display: flex;
@@ -28,44 +29,34 @@
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     animation: slideDown 1s ease forwards;
   }
-
   @keyframes slideDown {
     from {opacity: 0; transform: translateY(-20px);}
     to {opacity: 1; transform: translateY(0);}
   }
-
   header img.logo {
     height: 60px;
     margin-right: 15px;
   }
-
   header h1 {
     font-weight: 700;
     font-size: 1.8rem;
     color: #ff5722;
     letter-spacing: 1.2px;
   }
-
-  /* Subtle glowing text effect for bio only */
   .bio.glow {
     color: #ff5722;
-    text-shadow:
-      0 0 3px #ff5722,
-      0 0 6px #ff6f3c;
+    text-shadow: 0 0 3px #ff5722, 0 0 6px #ff6f3c;
     transition: text-shadow 0.3s ease;
   }
-
   main {
     flex: 1;
     padding: 20px;
     max-width: 1000px;
     margin: auto;
-    background: rgba(255 255 255 / 0.85);
+    background: rgba(255,255,255,0.85);
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.1);
   }
-
-  /* Video ad */
   .ad-container {
     position: relative;
     overflow: hidden;
@@ -79,13 +70,10 @@
     object-fit: cover;
     animation: fadeIn 2s ease forwards;
   }
-
   @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
   }
-
-  /* Mute/unmute button */
   .mute-btn {
     position: absolute;
     top: 12px;
@@ -98,58 +86,33 @@
     border-radius: 6px;
     cursor: pointer;
     user-select: none;
-    transition: background 0.3s ease;
     z-index: 10;
   }
-  .mute-btn:hover {
-    background: rgba(0,0,0,0.8);
-  }
-
-  /* Bio styling */
   .bio {
     font-size: 1.2rem;
     margin-bottom: 20px;
     white-space: pre-line;
     color: #444;
+    animation: fadeSlideUp 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
   }
-
-  /* Professional paragraph */
   .about {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 30px;
     color: #555;
-  }
-
-  /* Animation for bio and about */
-  @keyframes fadeSlideUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .bio, .about {
     animation: fadeSlideUp 1s ease forwards;
     opacity: 0;
-  }
-
-  .bio {
-    animation-delay: 0.5s;
-  }
-
-  .about {
     animation-delay: 1.2s;
   }
-
-  /* Jerseys gallery */
+  @keyframes fadeSlideUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
   .jerseys {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     margin-bottom: 40px;
   }
@@ -158,12 +121,11 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   .jersey-card:hover {
     transform: translateY(-5px);
@@ -174,46 +136,7 @@
     max-height: 340px;
     width: auto;
     height: auto;
-    display: block;
-    margin: 0 auto;
   }
-
-  /* Contact section */
-  footer {
-    background: #222;
-    color: #eee;
-    padding: 20px 10px;
-    text-align: center;
-    border-top: 4px solid #ff5722;
-  }
-
-  .contacts {
-    margin: 15px 0;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-  }
-  .contacts a {
-    color: #eee;
-    text-decoration: none;
-    font-size: 2rem;
-    transition: color 0.3s ease;
-  }
-  .contacts a:hover {
-    color: #ff5722;
-  }
-  .contacts a svg {
-    vertical-align: middle;
-  }
-
-  .dm-order {
-    margin-top: 15px;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: #ff5722;
-  }
-
-  /* Order button section */
   #order-form {
     text-align: center;
     margin: 40px auto;
@@ -236,85 +159,57 @@
   #order-form a:hover {
     background: #e64a19;
   }
-
 </style>
 </head>
 <body>
-
 <header>
   <img src="logo.jpg" alt="The Jersey Doko Logo" class="logo" />
   <h1>The Jersey Doko</h1>
 </header>
-
 <main>
   <section class="ad-container">
     <video id="adVideo" autoplay muted loop playsinline>
       <source src="ad.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
     </video>
-    <button id="muteBtn" aria-label="Mute/Unmute Video" title="Mute/Unmute Video" class="mute-btn">
-      🔇
-    </button>
+    <button id="muteBtn" class="mute-btn">🔇</button>
   </section>
-
   <section class="bio glow">
-    The Jersey Doko<br />
-    📦 Fast Delivery All Over Nepal<br />
-    💸COD Chadai aaudai xa<br />
-    DM gara— aba late nagara!
+    The Jersey Doko<br />📦 Fast Delivery All Over Nepal<br />💸COD Chadai aaudai xa<br />DM gara— aba late nagara!
   </section>
-
   <section class="about">
-    <p>
-      Welcome to The Jersey Doko — your ultimate destination for high-quality, stylish football jerseys. Whether you're cheering for your favorite team or just want to look fresh on the field, we bring you the best collection with fast delivery all over Nepal. Experience convenience with cash on delivery coming soon, and a friendly DM for easy ordering. Join thousands of happy customers who trust us to bring passion and style together!
-    </p>
+    <p>Welcome to The Jersey Doko — your ultimate destination for high-quality, stylish football jerseys. Whether you're cheering for your favorite team or just want to look fresh on the field, we bring you the best collection with fast delivery all over Nepal. Experience convenience with cash on delivery coming soon, and a friendly DM for easy ordering.</p>
   </section>
 
-  <section class="jerseys" id="jersey-gallery">
+  <!-- AdSense ad unit -->
+  <div style="margin: 20px auto; max-width: 728px;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-4906776588234112"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <section class="jerseys">
     <div class="jersey-card">
       <img src="jersey.jpg" alt="Jersey 1" />
     </div>
-    <!-- Add more jersey-card divs here for new photos -->
   </section>
-
-  <!-- Order Now Button linking to your Google Form -->
   <section id="order-form">
     <h2>Order Now</h2>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeruebOBj01NdBQOFOrxud1yy4tpJvivTMccGVCwltJVK-86A/viewform" target="_blank" rel="noopener noreferrer">
-      Click Here to Place Your Order
-    </a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeruebOBj01NdBQOFOrxud1yy4tpJvivTMccGVCwltJVK-86A/viewform" target="_blank">Click Here to Place Your Order</a>
   </section>
 </main>
-
-<footer>
-  <div>Contact Us:</div>
-  <div class="contacts">
-    <a href="https://www.tiktok.com/@the_jersey_doko" target="_blank" aria-label="TikTok">
-      <!-- TikTok SVG Icon -->
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="#eee" xmlns="http://www.w3.org/2000/svg"><path d="M9.75 2V14.5C9.75 16.9853 7.48528 19.25 5 19.25C2.51472 19.25 0.25 16.9853 0.25 14.5C0.25 12.0147 2.51472 9.75 5 9.75C5.97897 9.75 6.88041 10.1896 7.52988 10.9101V2H9.75Z" fill="currentColor"/></svg>
-    </a>
-    <a href="https://www.instagram.com/the_jersey_doko/" target="_blank" aria-label="Instagram">
-      <!-- Instagram SVG Icon -->
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="#eee" xmlns="http://www.w3.org/2000/svg"><path d="M7.75 2H16.25C19.4224 2 22 4.57758 22 7.75V16.25C22 19.4224 19.4224 22 16.25 22H7.75C4.57758 22 2 19.4224 2 16.25V7.75C2 4.57758 4.57758 2 7.75 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.75 11.9951C15.7619 13.9827 13.9888 15.7559 11.9996 15.7451C10.011 15.7345 8.23798 13.9623 8.24855 11.9736C8.25939 9.98538 10.0316 8.21283 12.0202 8.22336C14.0089 8.23389 15.7813 10.0068 15.75 11.9951Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 7.25H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-  </div>
-  <div class="dm-order">DM us for order</div>
-</footer>
-
 <script>
   const video = document.getElementById('adVideo');
   const muteBtn = document.getElementById('muteBtn');
-
   muteBtn.addEventListener('click', () => {
-    if (video.muted) {
-      video.muted = false;
-      muteBtn.textContent = '🔊'; // Speaker icon
-    } else {
-      video.muted = true;
-      muteBtn.textContent = '🔇'; // Mute icon
-    }
+    video.muted = !video.muted;
+    muteBtn.textContent = video.muted ? '🔇' : '🔊';
   });
 </script>
-
 </body>
 </html>
